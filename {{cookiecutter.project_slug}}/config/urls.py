@@ -1,4 +1,4 @@
-"""basic_django URL Configuration
+"""{{ cookiecutter.project_name }} URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -19,3 +19,11 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
+
+
+if 'debug_toolbar' in settings.INSTALLED_APPS:
+	import debug_toolbar
+
+	urlpatterns += [
+		url(r'^__debug__/', include(debug_toolbar.urls)),
+	]
