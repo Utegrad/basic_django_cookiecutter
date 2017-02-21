@@ -31,7 +31,6 @@ _build
 local_settings.py
 project_slug
 my_test_project/*
-.gitconfig 
 
 # Generated when running py.test for the Cookiecutter Django generation tests
 .cache/
